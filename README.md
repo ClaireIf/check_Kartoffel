@@ -1,10 +1,10 @@
 # Kartoffel Price Checker - Automated Price Check for German Supermarkets
 
-This project automates the process of checking the prices of potatoes (Kartoffeln) in popular German supermarkets like Aldi, Lidl, and others using Python and Playwright.
+This project automates the process of checking the prices of potatoes (Kartoffeln) in popular German supermarkets like Aldi, Lidl, Kaufland, Netto and others using Python and Playwright.
 
 ## Description
 This is just a small test.
-This Python script leverages Playwright to automate the task of retrieving the price of potatoes from various German supermarkets, including **Aldi** and **Lidl**. The script navigates to product pages, handles cookie consent popups, and extracts the price information.
+This Python script leverages Playwright to automate the task of retrieving the price of potatoes from various German supermarkets, including **Aldi**,**Lidl**, **Kaufland** and **Netto**. The script navigates to product pages, handles cookie consent popups, and extracts the price information.
 
 The script does the following:
 1. Navigates to the product page of each supermarket.
