@@ -1,4 +1,4 @@
-# Kartoffel Price Checker - Automated Price Check for German Supermarkets
+# check Kartoffel - Check Kartoffel prices in German supermarkets.
 
 This project automates the process of checking the prices of potatoes (Kartoffeln) in popular German supermarkets like Aldi, Lidl, Kaufland, Netto and others using Python and Playwright.
 
