@@ -24,7 +24,7 @@ def run():
         # Wait and get the text of the .badge__text element
         try:
             page.wait_for_selector('.badge__text', timeout=10000)
-            badge_text = page.locator('.badge__text').inner_text()
+            badge_text = page.locator('.badge__text').inner_text() # Get the text of badge__text
             print(f"The value of badge__text is: {badge_text}")
         except Exception as e:
             print(f"error information: {e}")

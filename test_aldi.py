@@ -7,8 +7,7 @@ from playwright.sync_api import sync_playwright
 
 def run():
     with sync_playwright() as p:
-        # 启动浏览器
-        browser = p.chromium.launch(headless=False)  # headless=False 让浏览器可见
+        browser = p.chromium.launch(headless=False)
         page = browser.new_page()
 
         page.goto(
@@ -24,15 +23,13 @@ def run():
 
         # Wait and get the text of price__wrapper
         try:
-            page.wait_for_selector('.price__wrapper', timeout=10000)  # 设置超时为 10秒
-            price_text = page.locator('.price__wrapper').nth(0).inner_text()  # 获取 price__wrapper 的文本
+            page.wait_for_selector('.price__wrapper', timeout=10000)
+            price_text = page.locator('.price__wrapper').nth(0).inner_text()  # Get the text of price__wrapper, only the 0th value
             print(f"The value of price__wrapper is: {price_text}")
         except Exception as e:
             print(f"error information: {e}")
 
-        # 关闭浏览器
         browser.close()
 
 
-# 执行
 run()
