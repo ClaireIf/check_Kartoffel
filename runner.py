@@ -35,6 +35,16 @@ def scrape_supermarket(name, config, playwright):
         results.append({"Supermarket": name, "Price": "Search failed"})
         return
 
+    # Take a screenshot of the entire page
+    try:
+        screenshot_dir = "results/screenshots"
+        os.makedirs(screenshot_dir, exist_ok=True)
+        screenshot_path = os.path.join(screenshot_dir, f"{name}.png")
+        page.screenshot(path=screenshot_path, full_page=True)
+        print(f"{name}: Full page screenshot saved to {screenshot_path}")
+    except Exception as e:
+        print(f"{name}: Screenshot failed: {e}")
+
     # Step 4: Grab the first price (using all_text_contents)
     try:
         prices = page.locator(config["price_selector"]).all_text_contents()
